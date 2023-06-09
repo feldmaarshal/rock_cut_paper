@@ -17,6 +17,7 @@ class Player:
             print(f"{self.name}, now its your turn to choice!(write rock, cut or paper)")
             temp = input()
             temp = temp.lower().strip()
+
             if temp == '*':
                 print('We were glad to see you! Bye!')
                 sys.exit()

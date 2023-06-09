@@ -60,6 +60,7 @@ class RockCutPaper:
                 if not self._winner(self._choices[1][1]):
                     print('We were glad to see you! Bye!')
                     return False
+
         return True
 
     def _winner(self, id):

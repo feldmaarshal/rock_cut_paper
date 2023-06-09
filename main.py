@@ -11,4 +11,3 @@ game.add_player(boris)
 game.add_player(nikita)
 
 game.start()
-
