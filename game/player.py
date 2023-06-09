@@ -1,3 +1,5 @@
+import sys
+
 from game.variants import Variants
 
 
@@ -12,23 +14,22 @@ class Player:
     def set_choice(self):
 
         while True:
-            print("what is your choice?(write rock, cut or paper")
+            print(f"{self.name}, now its your turn to choice!(write rock, cut or paper)")
             temp = input()
-            temp.upper().strip()
+            temp = temp.lower().strip()
+            if temp == '*':
+                print('We were glad to see you! Bye!')
+                sys.exit()
 
             if temp == 'rock':
                 self._choice = Variants.ROCK
-                break
+                return self._choice
             elif temp == 'cut':
                 self._choice = Variants.CUT
-                break
+                return self._choice
             elif temp == 'paper':
                 self._choice = Variants.PAPER
-                break
+                return self._choice
             else:
                 print('it is not correct')
                 continue
-
-    def drop_choice(self) -> Variants:
-        self.set_choice()
-        return self._choice
